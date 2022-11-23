@@ -1,0 +1,33 @@
+:root {
+  --primary: #752092;
+  --secondary: #9ba5c9;
+  --third: #17181c;
+  --fourth: #ffffff;
+}
+
+.mockups-wrapper {
+    /* background: url("./img/mockups.png"); */
+    height: 100vh;
+    width: 100%;
+    background-color: var(--third);
+}
+
+.mockups-wrapper h2 {
+    text-align: center;
+    color: var(--fourth);
+    font-size: 2.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.mockups-wrapper img {
+    width: 100%;
+    height: 100vh;
+    filter: drop-shadow(5px 5px 5px #17181c);
+}
+
+@media only screen and (max-width:992px) {
+    .mockups-wrapper {
+        display: none;
+    }
+}

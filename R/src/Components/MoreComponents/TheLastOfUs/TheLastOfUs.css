@@ -1,0 +1,80 @@
+:root {
+  --primary: #752092;
+  --secondary: #9ba5c9;
+  --third: #17181c;
+  --fourth: #ffffff;
+}
+
+.tlou-wrapper {
+  background-color: var(--third);
+  padding: 5% 0;
+}
+
+.tlou-wrapper .container {
+  display: flex;
+  align-items: center;
+  color: var(--fourth);
+}
+
+.tlou-wrapper .container .right {
+  margin-left: 2vw;
+}
+
+.tlou-wrapper .container .right > span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 3.5vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.tlou-wrapper .container .right > h2 {
+  display: block;
+  margin-bottom: 1.5vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.tlou-wrapper .container .right > p {
+  font-size: 0.9rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.tlou-wrapper .container .right > button {
+  color: var(--fourth);
+  border: 2px solid var(--fourth);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 20px;
+  border-radius: 35px;
+  background-color: transparent;
+}
+
+.tlou-wrapper .container .right > button:hover {
+  transition: 0.3s;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+tlou-wrapper .container .left iframe {
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tlou-wrapper .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .tlou-wrapper .container .right {
+    margin-top: 2vh;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    .tlou-wrapper .container .left iframe {
+        width: 90vw;
+        height: 45vh;
+    }
+}

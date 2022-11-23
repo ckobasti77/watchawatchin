@@ -1,0 +1,247 @@
+:root {
+  --primary: #752092;
+  --secondary: #9ba5c9;
+  --third: #17181c;
+  --fourth: #ffffff;
+}
+
+.carousel .carousel-inner .carousel-item {
+  position: relative;
+  height: 90vh;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  /* min-height: 500px; */
+}
+.carousel .carousel-inner .carousel-item .carouel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* min-height: 500px; */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel .carousel-inner .carousel-item .slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 250px;
+  z-index: 999;
+  color: var(--fourth);
+}
+
+
+
+.carousel .carousel-inner .carousel-item .slide-content .slide-desc {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.3rem;
+  width: 75%;
+}
+
+.carousel .carousel-inner .carousel-item .slide-content h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3rem;
+}
+
+.carousel .carousel-inner .carousel-item .slide-content button {
+  color: var(--fourth);
+  border: 2px solid var(--fourth);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 20px;
+  border-radius: 35px;
+  background-color: transparent;
+}
+
+.carousel .carousel-inner .carousel-item .slide-content button:hover {
+  transition: 0.3s;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  /* color: var(--third); */
+}
+
+@media only screen and (max-width: 1200px) {
+  .carousel .carousel-inner .carousel-item .slide-content {
+    display: none;
+  }
+}
+@media only screen and (min-width: 930px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 100vh;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 100vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 80vh;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 80vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 70vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 70vh;
+  }
+  
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 70vh;
+  }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 60vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 60vh;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 60vh;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 50vh;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 50vh;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 40vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 40vh;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 40vh;
+  }
+
+}
+
+@media only screen and (max-width: 350px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 30vh;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-overlay {
+    height: 30vh;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 30vh;
+  }
+
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  z-index: 999;
+}
+
+.prev-arrow {
+  transform: rotate(90deg);
+  z-index: 999;
+
+}
+
+.next-arrow {
+  transform: rotate(-90deg);
+  z-index: 999;
+}
+
+.prev-arrow span,
+.next-arrow span {
+  display: block;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-bottom: 5px solid white !important;
+  border-right: 5px solid white !important;
+  margin: -10px;
+  animation: animate 2s infinite;
+  z-index: 999;
+}
+
+.prev-arrow span:nth-child(2),
+.next-arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.prev-arrow span:nth-child(3),
+.next-arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+
+.carousel-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}

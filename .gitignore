@@ -1,0 +1,7 @@
+/ME[]N/.env
+/ME[]N/node_modules
+
+/R/build
+/R/node_modules
+
+.vscode/extensions

@@ -1,0 +1,107 @@
+:root {
+  --primary: #752092;
+  --secondary: #9ba5c9;
+  --third: #17181c;
+  --fourth: #ffffff;
+  --fifth: #252525;
+}
+
+.getwawpro-wrapper {
+    background-color: var(--fifth);
+    min-height: 50vh;
+}
+
+.getwawpro-wrapper .container {
+    color: var(--fourth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getwawpro-wrapper .container h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.getwawpro-wrapper .container h1 span {
+    color: var(--primary);
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+}
+
+.getwawpro-wrapper .container > p {
+    margin-bottom: 50px;
+}
+
+.getwawpro-wrapper .container .boxes {
+    width: 100%;
+    display: flex;
+    /* gap: 30px; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.getwawpro-wrapper .container .boxes .single-box {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: rgba(117, 32, 146, 0.3);
+    padding: 15px;
+    min-height: 250px;
+}
+
+.getwawpro-wrapper .container .boxes .single-box:first-child {
+    border-right: none;
+}
+
+.getwawpro-wrapper .container .boxes .single-box .cancellation {
+    display: inline-block;
+}
+
+.getwawpro-wrapper .container .boxes .single-box .price {
+    font-size: 1.5rem;
+}
+
+.getwawpro-wrapper .container .boxes .single-box .save-up {
+    color: var(--secondary);
+}
+
+.getwawpro-wrapper .container .boxes .single-box button {
+    text-transform: uppercase;
+  /* margin-left: 7.5px; */
+  line-height: 40px;
+  padding: 0 20px;
+  border: 2px solid var(--primary);
+  color: var(--fourth);
+  border-radius: 35px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.getwawpro-wrapper .container .boxes .single-box button:hover {
+    transition: 0.3s;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--fourth);
+}
+
+@media only screen and (max-width: 992px) {
+    .getwawpro-wrapper .container .boxes .single-box {
+        width: 45%;
+        margin-bottom: 5vh;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .getwawpro-wrapper .container .boxes .single-box {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 5vh;
+        align-items: center;
+    }
+}

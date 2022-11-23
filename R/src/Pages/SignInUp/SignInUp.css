@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+  --primary: #752092;
+  --secondary: #9ba5c9;
+  --third: #17181c;
+  --fourth: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.signinup-wrapper {
+  background-color: #111;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../../../public/img/4.jpg");
+  background-size: cover;
+}
+
+.form-container form h1 {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.form-container form span {
+  font-size: 12px;
+  color: beige;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.overlay-container .signinup-overlay .overlay-panel p {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+} */
+
+.signinup-container {
+  position: absolute;
+  /* box-shadow: 2.8px 2.8px 2.2px #05050594, 8px 9px 9px #00000017, 9px 10px 10px #00000017, 7px 9px 11px #00000017, 7px 7px 2px #00000017, 6px 11px 13px #000; */
+  overflow: hidden;
+  min-height: 480px;
+  width: 768px;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.form-container {
+  background: rgba(45, 52, 54, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-container form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-container form div {
+  /* margin-right: 5%; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container form div div {
+  width: 10% !important;
+}
+
+.form-container form div input {
+  width: 90% !important;
+}
+/* 
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+} */
+
+/* .form-container input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+} */
+
+.form-container form button,
+.overlay-panel button,
+.form-container button {
+  color: var(--fourth);
+  /* background-color: var(--secondary); */
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 35px;
+  margin-top: 15px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.form-container form button {
+  background-color: var(--fourth) !important;
+  color: var(--primary) !important;
+}
+
+.form-container form input[type="text"],
+.form-container form input[type="email"],
+.form-container form input[type="password"] {
+  width: 240px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200px;
+  padding: 10px 0;
+  transition: border 0.5s;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-container form button:active,
+.overlay-panel button:active {
+  transform: scale(0.95);
+}
+
+.form-container form button:focus,
+.overlay-panel button:focus {
+  outline: none;
+}
+
+.ghost {
+  background: transparent;
+  border: 2px solid var(--primary);
+  background-color: var(--primary);
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  z-index: 0;
+  opacity: 0;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.signinup-overlay {
+  background: transparent;
+  background: linear-gradient(to right, #ff4b2b, #ff416c) no repeat 0 0 / cover;
+  color: #fff;
+  position: absolute;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.signinup-container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.signinup-container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.signinup-container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.signinup-container.right-panel-active .signinup-overlay {
+  transform: translateX(50%);
+}
+
+.signinup-container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.signinup-container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-left: 0.25px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--primary) !important;
+  filter: drop-shadow(0px 0px 1px white);
+  /* margin-left: 0.25rem; */
+  margin-right: 0.5rem !important;
+  padding-bottom: 1.75rem !important;
+}
+
+.invalid {
+  width: 20px !important;
+  height: 20px !important;
+  color: red !important;
+  /* margin-left: 0.25rem; */
+  margin-right: 0.5rem !important;
+  padding-bottom: 1.75rem !important;
+  filter: drop-shadow(0px 0px 1px white);
+}
+
+.invalid > svg,
+.valid > svg,
+.hide > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.persistCheck {
+  font-size: 0.75rem;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.persistCheck label {
+  margin: 0;
+}
+
+.persistCheck input {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px 2px 2px;
+}

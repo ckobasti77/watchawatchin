@@ -1,0 +1,145 @@
+:root {
+  --primary: #752092;
+  --secondary: #9ba5c9;
+  --third: #17181c;
+  --fourth: #ffffff;
+}
+
+.toprated-wrapper {
+  background-color: var(--third);
+}
+
+.toprated-wrapper .container {
+  padding: 5% 0;
+}
+
+.toprated-wrapper .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.toprated-wrapper .container h2 {
+  margin-bottom: 10vh;
+  color: var(--fourth);
+  font-size: 2.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.toprated-wrapper .container .toprated-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.toprated-wrapper .container .toprated-cards .single-card {
+  width: 22.5%;
+  background: linear-gradient(
+    315deg,
+    rgba(23, 24, 28, 1) 0%,
+    rgba(117, 32, 146, 1) 100%
+  );
+  border-radius: 24px;
+  box-shadow: 15px 5px 20px -7px rgb(0 0 0 / 30%);
+  padding: 20px;
+  color: var(--fourth);
+}
+
+.toprated-wrapper .container .toprated-cards .single-card img {
+  border-radius: 12px;
+  margin-bottom: 2vh;
+}
+
+.toprated-wrapper .container .toprated-cards .single-card img {
+  width: 100%;
+}
+
+.toprated-wrapper .container .toprated-cards .single-card h4 {
+  margin-bottom: 3vh;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--fourth) !important;
+}
+
+.toprated-wrapper .container .toprated-cards .single-card p {
+  text-align: justify;
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.75px;
+}
+
+.toprated-wrapper .container .toprated-cards .single-card .button-rate-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toprated-wrapper
+  .container
+  .toprated-cards
+  .single-card
+  .button-rate-div
+  button {
+  padding: 5px 30px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  border-radius: 35px;
+  border: 1px solid var(--fourth);
+  color: var(--fourth);
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: sans-serif;
+}
+
+.toprated-wrapper
+  .container
+  .toprated-cards
+  .single-card
+  .button-rate-div
+  button:hover {
+  transition: 0.3s;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.toprated-wrapper
+  .container
+  .toprated-cards
+  .single-card
+  .button-rate-div
+  span {
+  font-family: sans-serif;
+}
+
+.toprated-wrapper
+  .container
+  .toprated-cards
+  .single-card
+  .button-rate-div
+  span
+  img {
+  width: 24px;
+  margin-bottom: 0;
+  padding-bottom: 7.5px;
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .toprated-wrapper .container .toprated-cards .single-card {
+    width: 45%;
+    margin-top: 30px;
+  }
+  .toprated-wrapper .container .toprated-cards .single-card img {
+    margin-bottom: 4vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .toprated-wrapper .container .toprated-cards .single-card {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 30px;
+  }
+  .toprated-wrapper .container .toprated-cards .single-card img {
+    margin-bottom: 6vh;
+  }
+}
