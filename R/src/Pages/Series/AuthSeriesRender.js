@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Series.css";
 
 //Auth
 
@@ -34,7 +33,6 @@ const SeriesRender = ({ selectedSort, selectedGenres }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // setLoading(true);
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/tv/${selectedSort}?api_key=${apiKey}&language=en-US&page=${page}&with_genres=${selectedGenres.join(
@@ -44,8 +42,6 @@ const SeriesRender = ({ selectedSort, selectedGenres }) => {
         const dataJson = await res.json();
         const data = { ...dataJson }.results;
         setSeries((pre) => [...pre, ...data.slice(0, 18)]);
-        // console.log(series);
-        // setLoading(false);
       } catch (error) {
         setError(error);
       }
@@ -78,13 +74,6 @@ const SeriesRender = ({ selectedSort, selectedGenres }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [offset]);
-
-  // if (loading) return (
-  //   <div className="preloader-container">
-  //     <h1>Loading . . .</h1>
-  //   </div>
-  // );
-  // if (error) console.log(error);
 
   return (
     <div className="movies-wrapper">

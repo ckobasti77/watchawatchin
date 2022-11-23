@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import GalleryData from "./GalleryData";
 import "./Gallery.css";
 import useFetch from '../../../CustomHooks/useFetch';
 

@@ -8,10 +8,6 @@ const usePagination = (page) => {
   const [error, setError] = useState(false);
   const [hasMore, setHasMore] = useState(false);
 
-//   useEffect(() => {
-//     setMovies([])
-//   }, [term])
-
   useEffect(() => {
     setLoading(true);
     setError(false);

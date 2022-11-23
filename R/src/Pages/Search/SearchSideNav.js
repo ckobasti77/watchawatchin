@@ -128,7 +128,6 @@ const SearchSideNav = ({ setSelectedSort, setSelectedGenres, selectedSort }) => 
                   id="popular"
                   onClick={() => {
                     selectedRadioButton("tv");
-                    // setSortSelect("tv");
                   }}
                 />
                 <label style={{ marginLeft: 5 }} htmlFor="popular">

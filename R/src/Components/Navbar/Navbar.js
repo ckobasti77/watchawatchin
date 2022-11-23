@@ -14,15 +14,6 @@ const Navbar = ({signedInFlag}) => {
     });
   };
   
-  // const history = useNavigate();
-
-  // const logOut = () => {
-  //   window.localStorage.removeItem("token");
-  //   window.localStorage.removeItem("isLoggedIn");
-  //   setSignedIn(false);
-  // }
-  // let loggedIn = window.localStorage.getItem("isLoggedIn");
-
   return (
     <nav className="navbar navbar-expand-xl navbar-wrapper position-sticky p-0">
       <div className="container-fluid mx-5">
@@ -47,16 +38,6 @@ const Navbar = ({signedInFlag}) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent" p>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            {/* <li className="nav-item">
-              <NavLink
-                to="/featured"
-                className={({ isActive }) =>
-                  isActive ? "link nav-link active" : "link nav-link"
-                }
-              >
-                featured
-              </NavLink>
-            </li> */}
             <li className="nav-item">
               <NavLink
                 to="/movies"
@@ -114,20 +95,7 @@ const Navbar = ({signedInFlag}) => {
             </li>
           </ul>
           <div className="d-flex gap-3">
-            {/* <span className="search-field"> */}
-            {/* <input
-              type="text"
-              className="search"
-              placeholder="Search . . ."
-              required
-            /> */}
-
-              {/* <BsSearch className="search-icon" style={{color: "#752092"}}/> */}
-              {/* </span> */}
-            {/* <button onClick={() => history("/")} className="logout" style={{display: signedInFlag ? 'inline-block' : 'none'}}>Sign out</button>
-            <Link to="signinup" className="login" style={{display: signedInFlag ? 'none' : 'inline-block'}}>Sign In</Link> */}
             <Link to="signinup" className="login">Sign In</Link>
-            {/* <SignInUp /> */}
             <Link to="getwawpro" className="pro-ver" onClick={() => scrollToTop()}>Get WaWPro</Link>
           </div>
         </div>

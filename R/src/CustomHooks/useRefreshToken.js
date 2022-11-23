@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import axios from "../axios";
 import useAuth from "./useAuth";
 
 const useRefreshToken = () => {
-  const { auth } = useAuth();
   const { setAuth } = useAuth();
   
 

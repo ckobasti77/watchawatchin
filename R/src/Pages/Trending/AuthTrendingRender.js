@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Trending.css";
 import { BsArrowsAngleContract, BsSuitHeart } from "react-icons/bs";
 
 //Auth
@@ -12,7 +11,6 @@ const TrendingRender = ({ selectedSort, timespan, selectedGenres }) => {
   const [modal, setModal] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [page, setPage] = useState(1);
-  // const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [offset, setOffset] = useState(0);
   const [paginationLoader, setPaginationLoader] = useState(false);
@@ -29,7 +27,6 @@ const TrendingRender = ({ selectedSort, timespan, selectedGenres }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // setLoading(true);
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/trending/${selectedSort}/${timespan}?api_key=${apiKey}&page=${page}&with_genres=${selectedGenres.join(
@@ -39,8 +36,6 @@ const TrendingRender = ({ selectedSort, timespan, selectedGenres }) => {
         const dataJson = await res.json();
         const data = { ...dataJson }.results;
         setTrending((pre) => [...pre, ...data.slice(0, 18)]);
-        // console.log(trending);
-        // setLoading(false);
       } catch (error) {
         setError(error);
       }
@@ -74,12 +69,7 @@ const TrendingRender = ({ selectedSort, timespan, selectedGenres }) => {
     };
   }, [offset]);
 
-  // if (loading === true)
-  //   return (
-  //     <div className="preloader-container">
-  //       <h1>Loading . . .</h1>
-  //     </div>
-  //   );
+  
   if (error) console.log(error);
 
   return (

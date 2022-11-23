@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
+
 const PORT = process.env.PORT || 3500;
 
 // Connect to db
@@ -25,7 +26,7 @@ app.use(logger);
 app.use(credentials);
 
 // cross origin resource sharing
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.urlencoded({ extended: false }));
 

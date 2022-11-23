@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import "./SideNavbar.css";
 import { BsFillCaretDownFill } from "react-icons/bs";
-import useFetch1 from "../../CustomHooks/useFetch1";
 
 const SeriesSideNav = ({ setSelectedSort, setSelectedGenres }) => {
   const apiKey = `5dc8da9950191123fe0a706966b868bb`;

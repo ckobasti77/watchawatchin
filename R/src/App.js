@@ -29,6 +29,18 @@ import Favorites from "./Pages/Favorites/Favorites";
 import Settings from "./Components/Account/Account";
 
 function App() {
+
+  
+  // PRELOADER
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // setLoading(true);
+    const timeoutID = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timeoutID);
+  }, []);
+
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
 
@@ -60,52 +72,197 @@ function App() {
 
   return (
     <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <SharedLayout setSignedIn={setSignedIn} signedIn={signedIn} />
-            }
-          >
-            <Route index element={<Home />} />
-            <Route path="movies" element={<Movies />} />
-            <Route path="series" element={<Series />} />
-            <Route path="trending" element={<Trending />} />
-            <Route path="more" element={<More />} />
-            <Route path="search" element={<Search />} />
+      {loading ? (
+        <div class="stage">
+          <div class="campfire">
+            <div class="sparks">
+              <div class="spark"></div>
+              <div class="spark"></div>
+              <div class="spark"></div>
+              <div class="spark"></div>
+              <div class="spark"></div>
+              <div class="spark"></div>
+              <div class="spark"></div>
+              <div class="spark"></div>
+            </div>
+            <div class="logs">
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+              <div class="log">
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+                <div class="streak"></div>
+              </div>
+            </div>
+            <div class="sticks">
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+            </div>
+            <div class="fire">
+              <div class="fire__red">
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+              </div>
+              <div class="fire__orange">
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+              </div>
+              <div class="fire__yellow">
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+              </div>
+              <div class="fire__white">
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <BrowserRouter>
+          <Routes>
             <Route
-              path="signinup"
-              element={<SignInUp setSignedIn={setSignedIn} />}
-            />
-            <Route path="getwawpro" element={<GetWawPro />} />
-            <Route path="privacypolicy" element={<PrivacyPolicy />} />
-            <Route path="termsofuse" element={<TermsOfUse />} />
-            <Route path="about" element={<About />} />
-          </Route>
-          <Route element={<PersistLogin />}>
-            <Route element={<RequireAuth />}>
+              path="/"
+              element={
+                <SharedLayout setSignedIn={setSignedIn} signedIn={signedIn} />
+              }
+            >
+              <Route index element={<Home />} />
+              <Route path="movies" element={<Movies />} />
+              <Route path="series" element={<Series />} />
+              <Route path="trending" element={<Trending />} />
+              <Route path="more" element={<More />} />
+              <Route path="search" element={<Search />} />
               <Route
-                path="/auth"
-                element={<AuthSharedLayout setSignedIn={setSignedIn} />}
-              >
-                <Route index element={<Home />} />
-                <Route path="movies+" element={<AuthMovies />} />
-                <Route path="series+" element={<AuthSeries />} />
-                <Route path="trending+" element={<AuthTrending />} />
-                <Route path="more+" element={<More />} />
-                <Route path="search+" element={<AuthSearch />} />
-                <Route path="favorites+" element={<Favorites />} />
-                <Route path="settings+" element={<Settings />} />
-                <Route path="getwawpro+" element={<GetWawPro />} />
-                <Route path="privacypolicy+" element={<PrivacyPolicy />} />
-                <Route path="termsofuse+" element={<TermsOfUse />} />
-                <Route path="about+" element={<About />} />
+                path="signinup"
+                element={<SignInUp setSignedIn={setSignedIn} />}
+              />
+              <Route path="getwawpro" element={<GetWawPro />} />
+              <Route path="privacypolicy" element={<PrivacyPolicy />} />
+              <Route path="termsofuse" element={<TermsOfUse />} />
+              <Route path="about" element={<About />} />
+            </Route>
+            <Route element={<PersistLogin />}>
+              <Route element={<RequireAuth />}>
+                <Route
+                  path="/auth"
+                  element={<AuthSharedLayout setSignedIn={setSignedIn} />}
+                >
+                  <Route index element={<Home />} />
+                  <Route path="movies+" element={<AuthMovies />} />
+                  <Route path="series+" element={<AuthSeries />} />
+                  <Route path="trending+" element={<AuthTrending />} />
+                  <Route path="more+" element={<More />} />
+                  <Route path="search+" element={<AuthSearch />} />
+                  <Route path="favorites+" element={<Favorites />} />
+                  <Route path="settings+" element={<Settings />} />
+                  <Route path="getwawpro+" element={<GetWawPro />} />
+                  <Route path="privacypolicy+" element={<PrivacyPolicy />} />
+                  <Route path="termsofuse+" element={<TermsOfUse />} />
+                  <Route path="about+" element={<About />} />
+                </Route>
               </Route>
             </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      )}
       <button
         className="scrollToTop"
         onClick={() => scrollToTop()}

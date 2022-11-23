@@ -14,7 +14,6 @@
   background-color: var(--fifth);
   min-height: 40vh;
   width: 100%;
-  /* padding: 0% 0% 0% 3% !important; */
 }
 
 .search-container form {
@@ -25,18 +24,6 @@
   padding: 2% 25px 2% 70px !important;
 
 }
-
-/* @media only screen and (max-width: 1200px) {
-  .search-container {
-    padding: 0% 0% 0% 4% !important;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .search-container {
-    padding: 0% 0% 0% 5% !important;
-  }
-} */
 
 .search-container form {
   display: flex;
@@ -50,7 +37,6 @@
     padding: 3vh 1vw;
     background-color: #252525;
     border: none;
-    /* border-bottom: 1px solid var(--fifth); */
 }
 
 .search-container form input::placeholder {
@@ -59,7 +45,6 @@
 
 .search-container form input:focus {
   outline: 0;
-  /* border-bottom: 1px solid var(--primary); */
 }
 
 .search-container form button {
@@ -67,5 +52,4 @@
   background-color: var(--fifth);
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.5);
-  /* border-bottom: 1px solid var(--primary); */
 }

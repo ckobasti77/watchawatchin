@@ -126,7 +126,6 @@ const SignInUp = ({ setSignedIn }) => {
   const [userLog, setUserLog] = useState("");
   const [pwdLog, setPwdLog] = useState("");
   const [errMsgLog, setErrMsgLog] = useState("");
-  // const [successLog, setSuccessLog] = useState(false);
 
   useEffect(() => {
     userRef.current.focus();
@@ -136,7 +135,6 @@ const SignInUp = ({ setSignedIn }) => {
     setErrMsgLog("");
   }, [userLog, pwdLog]);
 
-  // const history = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -150,8 +148,6 @@ const SignInUp = ({ setSignedIn }) => {
           // withCredentials: true,
         }
       );
-      console.log(JSON.stringify(response?.data));
-      // console.log(JSON.stringify(response));
 
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
@@ -218,7 +214,6 @@ const SignInUp = ({ setSignedIn }) => {
                   {errMsg}
                 </p>
                 <h1>Create Account for free</h1>
-                {/* <span>Create an account for free</span> */}
                 <div>
                   <div>
                     <span className={validUsername ? "valid" : "hide"}>
@@ -365,19 +360,6 @@ const SignInUp = ({ setSignedIn }) => {
             </div>
           )}
         </>
-        {/* <>
-          {successLog ? (
-            <div className="form-container sign-in-container">
-              <h1>You are Logged in!</h1>
-              <button
-                className="ghost"
-                id="signUp2"
-                onClick={() => history("/auth")}
-              >
-                Home
-              </button>
-            </div>
-          ) : ( */}
         <div className="form-container sign-in-container">
           <form onSubmit={handleLogin}>
             <p
@@ -400,7 +382,6 @@ const SignInUp = ({ setSignedIn }) => {
                 setUserInput(e.target.value);
               }}
               value={userLog}
-              // required
             />
             <input
               type="password"
@@ -409,22 +390,10 @@ const SignInUp = ({ setSignedIn }) => {
               style={{ width: "100%" }}
               onChange={(e) => setPwdLog(e.target.value)}
               value={pwdLog}
-              // required
             />
             <button>Sign In</button>
-            {/* <div className="persistCheck">
-              <input 
-                type="checkbox"
-                id="persist"
-                onChange={togglePersist}
-                checked={persist}
-              />
-              <label htmlFor="persist">Trust This Device</label>
-            </div> */}
           </form>
         </div>
-        {/* )} */}
-        {/* </> */}
 
         <div className="overlay-container">
           <div className="signinup-overlay">

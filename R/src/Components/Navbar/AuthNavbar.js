@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import useLogout from "../../CustomHooks/useLogout";
@@ -21,12 +21,6 @@ const Navbar = () => {
       behavior: "smooth",
     });
   };
-  // useEffect(() => {
-  //   if(open) {
-
-  //   }
-  // }, [open])
-  
 
   const [userInput, setUserInput] = useLocalStorage("userLog", "");
 
@@ -40,13 +34,6 @@ const Navbar = () => {
     window.localStorage.removeItem('accessToken')
     window.localStorage.removeItem('roles')
   };
-
-  // const logOut = () => {
-  //   window.localStorage.removeItem("token");
-  //   window.localStorage.removeItem("isLoggedIn");
-  //   setSignedIn(false);
-  // }
-  // let loggedIn = window.localStorage.getItem("isLoggedIn");
 
   return (
     <nav className="navbar navbar-expand-xl navbar-wrapper position-sticky p-0">
@@ -72,16 +59,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent" p>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            {/* <li className="nav-item">
-              <NavLink
-                to="/featured"
-                className={({ isActive }) =>
-                  isActive ? "link nav-link active" : "link nav-link"
-                }
-              >
-                featured
-              </NavLink>
-            </li> */}
+            
             <li className="nav-item">
               <NavLink
                 to="/auth/movies+"
@@ -150,28 +128,6 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="d-flex gap-3">
-            {/* <span className="search-field"> */}
-            {/* <input
-              type="text"
-              className="search"
-              placeholder="Search . . ."
-              required
-            /> */}
-
-            {/* <BsSearch className="search-icon" style={{color: "#752092"}}/> */}
-            {/* </span> */}
-            {/* <button
-              onClick={() => {
-                signOut();
-                localStorage.removeItem("userlog");
-              }}
-              className="logout"
-            >
-              Sign out
-            </button> */}
-
-            {/* <Link to="signinup" className="login" style={{display: signedInFlag ? 'none' : 'inline-block'}}>Sign In</Link> */}
-            {/* <SignInUp /> */}
             <Link
               to="/auth/getwawpro+"
               className="pro-ver"
@@ -185,8 +141,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* {open && (
-         */}
         <div className="dropdown-list" style={{transform: open ? "translateX(0) scale(1)" : "translateX(200px) scale(0)", opacity: open ? "1" : "0"}}>
           <h5>{userInput}</h5>
           <hr />
@@ -216,7 +170,6 @@ const Navbar = () => {
             <span className="drop-text">Sign out</span>
           </a>
         </div>
-      {/* // )} */}
     </nav>
   );
 };

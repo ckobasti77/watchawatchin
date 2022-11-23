@@ -45,16 +45,9 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-/* a {
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0;
-} */
 
 .signinup-container {
   position: absolute;
-  /* box-shadow: 2.8px 2.8px 2.2px #05050594, 8px 9px 9px #00000017, 9px 10px 10px #00000017, 7px 9px 11px #00000017, 7px 7px 2px #00000017, 6px 11px 13px #000; */
   overflow: hidden;
   min-height: 480px;
   width: 768px;
@@ -82,7 +75,6 @@
 }
 
 .form-container form div {
-  /* margin-right: 5%; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -95,35 +87,12 @@
 .form-container form div input {
   width: 90% !important;
 }
-/* 
-.social-container {
-  margin: 20px 0;
-}
 
-.social-container a {
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5px;
-  height: 40px;
-  width: 40px;
-} */
-
-/* .form-container input {
-  background: #eee;
-  border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
-} */
 
 .form-container form button,
 .overlay-panel button,
 .form-container button {
   color: var(--fourth);
-  /* background-color: var(--secondary); */
   font-size: 12px;
   font-weight: bold;
   padding: 12px 35px;
@@ -301,7 +270,6 @@
   height: 20px !important;
   color: var(--primary) !important;
   filter: drop-shadow(0px 0px 1px white);
-  /* margin-left: 0.25rem; */
   margin-right: 0.5rem !important;
   padding-bottom: 1.75rem !important;
 }
@@ -310,7 +278,6 @@
   width: 20px !important;
   height: 20px !important;
   color: red !important;
-  /* margin-left: 0.25rem; */
   margin-right: 0.5rem !important;
   padding-bottom: 1.75rem !important;
   filter: drop-shadow(0px 0px 1px white);

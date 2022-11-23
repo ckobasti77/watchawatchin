@@ -59,7 +59,6 @@ const M3gan = () => {
               </div>
             </div>
           </div>
-          {/* <button>Find out more</button> */}
         </div>
         <div className="right">
           <iframe

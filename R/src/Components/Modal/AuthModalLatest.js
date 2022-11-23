@@ -146,7 +146,6 @@ const AuthModalLatest = (props) => {
                 }}
               >
                 <img src="/./img/savetofav.png" alt="savetofav" style={{ marginRight: 5, fill: "#fff" }} className="heart" />
-                {/* <BsSuitHeart style={{ marginRight: 5 }} className="heart" /> */}
                 <span
                   style={{
                     marginRight: 25,

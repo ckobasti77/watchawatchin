@@ -1,13 +1,7 @@
-import React, { useEffect } from "react";
-
-//skeleton
-
-import { BsFillHandThumbsUpFill } from 'react-icons/bs';
+import React from "react";
 
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
-//
 
 const AuthSingleCard = (props) => {
   return (

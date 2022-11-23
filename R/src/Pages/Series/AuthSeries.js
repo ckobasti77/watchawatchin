@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AuthSeriesRender from './AuthSeriesRender';
 import SeriesSideNav from './SeriesSideNav'
-import "./Series.css";
 
 const AuthSeries = () => {
   const [selectedSort, setSelectedSort] = useState("on_the_air");

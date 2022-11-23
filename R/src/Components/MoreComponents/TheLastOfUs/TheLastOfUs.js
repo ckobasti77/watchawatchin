@@ -11,7 +11,6 @@ const TheLastOfUs = () => {
               height="378"
               src="https://www.youtube.com/embed/rBRRDpQ0yc0"
               title="The last of Us"
-              // frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>

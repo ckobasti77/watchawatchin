@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../Components/SideNavbar/SideNavbar.css";
 import { BsFillCaretDownFill } from "react-icons/bs";
-import useFetch1 from "../../CustomHooks/useFetch1";
 
 const TrendingSideNav = ({ setSelectedSort, setTimespan, setSelectedGenres }) => {
   const apiKey = `5dc8da9950191123fe0a706966b868bb`;
@@ -30,16 +29,6 @@ const TrendingSideNav = ({ setSelectedSort, setTimespan, setSelectedGenres }) =>
   const selectedTimespan = (sort) => {
     setTimespan(sort);
   };
-
-  const handleChange = (e) => {
-    const {value, checked} = e.target;
-
-    if (checked) {
-      setSelectedGenres(prev => [...prev, value])
-    } else {
-      setSelectedGenres(prev => prev.filter((e) => e !== value))
-    }
-  }
 
   return (
     <div className="kontenjer">

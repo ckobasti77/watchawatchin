@@ -26,7 +26,6 @@
 .watch-links {
   display: flex;
   flex-wrap: wrap;
-  /* height: 200px; */
   margin-top: 10px;
 }
 
@@ -127,7 +126,6 @@ nav {
 
 .navbar .login, .navbar .pro-ver, .navbar .logout, .watch-link {
   text-transform: uppercase;
-  /* margin-left: 7.5px; */
   line-height: 40px;
   padding: 0 20px;
   border: none;
@@ -170,7 +168,6 @@ nav {
   border-radius: 35px;
   transition: all 0.5s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 var(--primary);
-  /* margin-right: 15px; */
   margin-top: 5px;
   caret-color: var(--primary);
 }
@@ -197,9 +194,6 @@ nav {
 }
 
 @media only screen and (max-width: 1200px) {
-  /* .navbar-wrapper {
-    width: 100vw;
-  } */
   .navbar-wrapper .container-fluid .navbar-collapse .d-flex {
     flex-direction: column;
     align-items: center;
@@ -312,7 +306,6 @@ nav {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid var(--primary); */
   text-transform: none;
   box-shadow: 32px 32px 72px 11px rgba(0,0,0,0.75);
   transform: translateX(200px);
@@ -356,8 +349,6 @@ nav {
 .dropdown-list .menu-item:nth-of-type(2) .drop-icon svg {
   margin-left: -1px;
 }
-
-
 
 .dropdown-list .menu-item:nth-child(2) {
   margin-top: 15px;

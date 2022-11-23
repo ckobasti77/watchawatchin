@@ -10,7 +10,6 @@ const SearchRender = ({ selectedSort, selectedGenres }) => {
   const [modal, setModal] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [page, setPage] = useState(1);
-  // const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [offset, setOffset] = useState(0);
   const [paginationLoader, setPaginationLoader] = useState(false);
@@ -35,7 +34,6 @@ const SearchRender = ({ selectedSort, selectedGenres }) => {
         );
         const dataJson = await res.json();
         const data = { ...dataJson }.results;
-        // console.log(data);
         setMovies((pre) => [...pre, ...data.slice(0, 18)]);
       } catch (error) {
         setError(error);
@@ -140,10 +138,6 @@ const SearchRender = ({ selectedSort, selectedGenres }) => {
                         ? single.release_date.slice(0, 4)
                         : single.first_air_date}
                     </span>
-
-                    {/* <span className="second">
-                      <img src="/./img/favorite.png" alt="fav" />
-                    </span> */}
 
                     <span className="third">
                       {single.vote_average.toFixed(1)}

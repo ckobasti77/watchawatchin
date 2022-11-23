@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsArrowsAngleContract } from "react-icons/bs";
 import "./Movies.css";
-import Modal from "../../Components/Modal/Modal";
 import SingleCard from "../../Components/SingleCard";
 import ModalLatest from "../../Components/Modal/ModalLatest";
 
@@ -28,7 +26,6 @@ const MoviesRender = ({ selectedSort, selectedGenres }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // setLoading(true);
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/movie/${selectedSort}?api_key=${apiKey}&language=en-US&page=${page}&with_genres=${selectedGenres.join(
@@ -38,8 +35,6 @@ const MoviesRender = ({ selectedSort, selectedGenres }) => {
         const dataJson = await res.json();
         const data = { ...dataJson }.results;
         setMovies((pre) => [...pre, ...data.slice(0, 18)]);
-        // console.log(movies);
-        // setLoading(false);
       } catch (error) {
         setError(error);
       }
@@ -73,12 +68,6 @@ const MoviesRender = ({ selectedSort, selectedGenres }) => {
     };
   }, [offset]);
 
-  // if (loading === true)
-  //   return (
-  //     <div className="preloader-container">
-  //       <h1>Loading . . .</h1>
-  //     </div>
-  //   );
   if (error) console.log(error);
 
   return (

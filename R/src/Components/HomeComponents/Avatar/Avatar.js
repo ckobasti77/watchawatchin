@@ -61,7 +61,6 @@ const Avatar = () => {
               </div>
             </div>
           </div>
-          {/* <button>Find out more</button> */}
         </div>
         <div className="right">
           <iframe

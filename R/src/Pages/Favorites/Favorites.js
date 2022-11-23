@@ -33,7 +33,21 @@ const Favorites = () => {
   return (
     <div className="movies-wrapper">
       <div className="container-fluid">
-        <div className="movies">
+        <div
+          className="d-flex text-center justify-content-center align-items-center"
+          style={{ minHeight: 600, backgroundColor: "#252525" }}
+        >
+          <h1
+            style={{
+              color: "#fff",
+              textShadow: "8px 8px 8px rgba(0,0,0,0.75)",
+              fontSize: "4rem",
+            }}
+          >
+            SOON . . .
+          </h1>
+        </div>
+        {/* <div className="movies">
           {movies?.map((single) => {
             return (
               <div
@@ -73,8 +87,9 @@ const Favorites = () => {
               </div>
             );
           })}
-        </div>
-        <div
+          
+        </div> */}
+        {/* <div
           class="mini-loader mt-3"
           style={{ opacity: paginationLoader ? "1" : "0" }}
         >
@@ -273,7 +288,7 @@ const Favorites = () => {
                 </div>
               </div>
             );
-          })}
+          })} */}
       </div>
     </div>
   );

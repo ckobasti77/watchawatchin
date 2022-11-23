@@ -1,14 +1,28 @@
 import React, { useState, useEffect } from "react";
-import useFetch from "../../../CustomHooks/useFetch";
 import "./HomeCarousel.css";
 
 const HomeCarousel = () => {
   const apiKey = `5dc8da9950191123fe0a706966b868bb`;
   const [first, setFirst] = useState([]);
   const [content, setContent] = useState([]);
-  const { data, loading, error } = useFetch(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`
-  );
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`
+        );
+        const dataJson = await res.json();
+        const data = { ...dataJson }.results;
+        setData(data);
+      } catch (error) {
+        console.log(error);
+      } 
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {
     setTimeout(() => setFirst(data.slice(0, 1)[0]), 500);
@@ -36,7 +50,6 @@ const HomeCarousel = () => {
               {{ ...first }.title ? { ...first }.title : { ...first }.name}
             </h2>
             <p className="slide-desc">{{ ...first }.overview}</p>
-
           </div>
           <div className="carousel-overlay"></div>
         </div>
@@ -54,7 +67,6 @@ const HomeCarousel = () => {
                   {single.title ? single.title : single.name}
                 </h2>
                 <p className="slide-desc">{single.overview}</p>
-
               </div>
               <div className="carousel-overlay"></div>
             </div>

@@ -8,12 +8,10 @@
 #burger1 {
   display: inline-block;
   position: relative;
-  /* right: -150px; */
   top: 12.5px;
   width: 30px;
   height: 30px;
   transition-duration: 0.5s;
-  /* margin-right: 10px; */
 }
 
 #burger1 .icon {
@@ -77,12 +75,8 @@
   height: 100%;
   width: 20vw;
   transition: all 0.5s ease-in-out;
-  /* border-right: 1px solid var(--primary); */
-  /* border-bottom: 1px solid var(--primary); */
   z-index: 999;
   overflow-y: auto;
-  /* scrollbar-color: black; */
-  /* box-shadow: 3px 3px 32px 2px rgba(0,0,0,1); */
 }
 
 .top-section {
@@ -111,7 +105,6 @@
   margin-top: 5vh;
   padding: 25px;
   transition: opacity 0.3s ease-in-out;
-  /* transition-delay: 0.3s; */
   overflow: hidden;
 }
 
@@ -159,29 +152,15 @@
   left: 4px;
   transition: 0.2s all ease-in-out;
   cursor: pointer;
-  /* color: var(--primary); */
 }
 
 .sort-radio:checked {
-  /* appearance: none; */
-  /* color: var(--primary); */
-  /* filter: drop-shadow(1px 1px 2px var(--primary)); */
   border: 3px solid #752092;
   background-color: rgba(255, 255, 255, 0.8);
-  /* accent-color: var(--primary); */
 }
-
-
 
 .genres-list{
   overflow-y: scroll;
 }
 
-/* .genres span {
-  font-size: 15px;
-} */
-
-@media only screen and(max-width: 576px) {
-  
-}
 

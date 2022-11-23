@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 body {
   margin: 0;
@@ -26,8 +26,8 @@ body {
   --fourth: #ffffff;
 }
 
-.gallery-wrapper h1{
-  font-family: 'Ubuntu', sans-serif;
+.gallery-wrapper h1 {
+  font-family: "Ubuntu", sans-serif;
   color: var(--fourth);
   background-color: var(--third);
   text-align: center;
@@ -38,7 +38,7 @@ body {
 }
 
 .gallery-wrapper h2 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: var(--fourth);
   background-color: var(--third);
   text-align: center;
@@ -142,8 +142,6 @@ body {
   border-radius: 10px;
 }
 
-/* FIN CREA BLOCK */
-
 .creaBlock {
   transform: scale(0.9);
 }
@@ -151,8 +149,6 @@ body {
 .creaBlock .lineSeparator {
   background-color: var(--primary) !important;
 }
-
-/* BOX 1 */
 
 .creaBlockPrez:nth-child(1) {
   z-index: 1;
@@ -183,8 +179,6 @@ body {
     rotateY(var(--blockRotateY));
 }
 
-/* BOX 2 */
-
 .creaBlockPrez:nth-child(2) {
   z-index: 2;
   margin-left: calc(-6 * var(--marginSize));
@@ -211,8 +205,6 @@ body {
     rotateY(var(--blockRotateY));
 }
 
-/* BOX 3 */
-
 .creaBlockPrez:nth-child(3) {
   z-index: 3;
   margin-left: calc(-6 * var(--marginSize));
@@ -233,8 +225,6 @@ body {
     rotateY(var(--blockRotateY));
 }
 
-/* BOX 4 */
-
 .creaBlockPrez:nth-child(4) {
   z-index: 4;
   margin-left: calc(-6 * var(--marginSize));
@@ -250,8 +240,6 @@ body {
     rotateY(var(--blockRotateY));
 }
 
-/* BOX 5 */
-
 .creaBlockPrez:nth-child(5) {
   z-index: 5;
   margin-left: calc(-6 * var(--marginSize));
@@ -262,8 +250,6 @@ body {
   transform: scale(1.1);
 }
 
-/* SEPARATORS */
-
 .lineSeparator {
   width: 100%;
   background-color: var(--main-box-border-color);
@@ -272,8 +258,6 @@ body {
   margin: 40px 0 25px 0;
   opacity: 0.4;
 }
-
-/* –––––––––––––––––––– */
 
 .creationsBlocUl {
   white-space: nowrap;
@@ -299,8 +283,8 @@ body {
     overflow-x: auto;
     padding: 0;
     min-height: 420px;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .creationsBlocUl::-webkit-scrollbar {
